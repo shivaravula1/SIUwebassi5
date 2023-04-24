@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Project</title>
+
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./js/present-sources.js" defer></script>
+    <script src="./js/present.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+
+
+    <header>
+        <nav class="custom-navbar" >
+            <div class="container-mainn">
+                <a class="logo" href="#">Web Project</a>         
+                <ul class="nav ">
+                    <li class="item">
+                        <a class="link" href="/index">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#about">About</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/sched">Schedule</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/feedback">Feedback</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="/game">Tictactoe</a>
+                    </li>
+   
+                </ul>
+               
+            </div>          
+        </nav>
+        </header>
+
+    <div class="landing-page-main" id="home">
+     <div class="overlay"></div>
+        <div class="landing-page-contents">
+            <div class="landing-page-top-content">
+               <div class="top-content-group">
+                
+                <h1 class="container1">Give your Feedback</h1>
+              
+                <div class="landing-button-group">
+                   
+                    <!-- <span><i class="fas fa-play-circle" style="font-size: 30px;"></i><span>Play video</span></span> -->
+                </div>
+               </div>
+            </div>
+            <!-- <div class="landing-page-bottom-content">
+                <h3>23,800 tress planted</h3>
+                <hr>
+                <h3>5840 donations collected</h3>
+            </div> -->
+        </div>
+    </div>
+    
+  <script>
+
+function feedback(){
+var name=document.myform.nam1.value;
+var name2=document.myform.nam2.value;
+var name3=document.myform.nam3.value;
+var name4=document.myform.nam4.value;
+var name6=document.myform.nam6.value;
+var name5=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)\.([a-z]{2,8})?$/
+if(name=="" || name2=="" || name3==""){
+    alert("Please fill all the fields.");
+    return false;
+}
+    else if(name.length< 10)
+    {
+    alert("Phone Number");
+    return false;
+    }
+    else if(name2.length>100){
+    alert("Please give the review in 100 words");
+    return false;
+    }
+    else if(!name4.match(name5)){
+        alert("Please enter the valid mail");
+        return false;
+    }
+    else{
+        return emvalidate();
+    }
+    
+   function emvalidate(){
+  alert("Thankyou for your response and Click ok to win exciting prices");
+}
+}
+    </script>
+
+
+
+<section id="contact" style="padding-top: 0px;">
+    <h1>OUR FEEDBACK</h1>
+    <div class="contact-container" style="width: 80%;margin:100px auto;margin-top: 0px;">
+        
+        <div class="left-col" style="padding-right: 20px;">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142631.3969499706!2d-91.50993667982591!3d39.71772266424757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois%2C%20USA!5e0!3m2!1sen!2sin!4v1676532066031!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+        <div class="right-col">
+        
+          
+        
+          
+          <form name="myform" onsubmit="return feedback()" action="/gifts">
+        <input type="text"  name="nam2" pattern="[a-zA-Z]{3,}" title="Please enter only alphabets" placeholder="Your Full Name">
+        <input type="phone number" name="nam1" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" title="Please enter only numbers" placeholder="Your Phone Number">
+        <input type="email" name="nam4" placeholder="Your Email Address" >
+        <textarea rows="2" placeholder="Your Address" id="message" name="nam6"></textarea>
+        <textarea rows="2" placeholder="Your Message" id="message" name="nam3"></textarea>
+        <button class="buttonn" type="submit" id="submit" name="submit">Send</button>
+        
+        
+      </form>
+      <div id="error"></div>
+      <div id="success-msg"></div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <footer class="footer" id="contact1" style="height: 30vh; background-color:#695aa6; display: grid; place-items:center; place-content:center; width: 100%;">
+        <h2>CONTACT Me @ </h2>   
+           <div class="address-main" style="width: 100%; height:70%;" >
+   <div class="address-sub" style="width: 100%; line-height:1.25;">
+   <p>
+       <i class="fa-solid fa-location-dot"></i> 409 W College Street APT 3, Carbondale
+   </p>
+   <p>
+       <i class="fa-solid fa-envelope"></i> shivateja.ravula@siu.edu
+   </p>
+   <p>
+       <i class="fa-solid fa-phone" style="margin: 0px 3px;"></i>6185277181
+   </p>
+   </div>
+           </div>
+   
+     </footer>  <blockquote cite="html.org" style="text-align: center;">Made with passion on HTML and CSS</blockquote>
+</body>
+</html>
